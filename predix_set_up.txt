@@ -1,0 +1,118 @@
+set http_proxy=http://sjc1intproxy01.crd.ge.com:8080
+set https_proxy=http://sjc1intproxy01.crd.ge.com:8080
+set HTTP_PROXY=http://sjc1intproxy01.crd.ge.com:8080
+set HTTPS_PROXY=http://sjc1intproxy01.crd.ge.com:8080
+set no_proxy=api.grc-apps.svc.ice.ge.com,login.grc-apps.svc.ice.ge.com,loggregator.grc-apps.svc.ice.ge.com,uaa.grc-apps.svc.ice.ge.com,console.grc-apps.svc.ice.ge.com,$no_proxy
+
+set path=C:\Users\ac835981\Documents\PREDIX_SOFTWARES\nodejs;C:\Users\ac835981\AppData\Roaming\npm;C:\Users\ac835981\AppData\Roaming\npm;C:\Users\ac835981\Documents\PREDIX_SOFTWARES\Git\bin;C:\Users\ac835981\Documents\PREDIX_SOFTWARES\apache-maven-3.1.0\bin;C:\Program Files\Java\jdk1.8.0_60\bin;C:\Users\ac835981\Documents\PREDIX_SOFTWARES\cf-cli
+set java_home=C:\Program Files\Java\jdk1.8.0_60
+
+
+C:\Users\ac835981\AppData\Roaming\npm
+
+============================================================================
+
+'cf login -a https://api.system.aws-usw02-pr.ice.predix.io'
+
+assignment link:
+
+
+http://assignment-aritra.run.aws-usw02-pr.ice.predix.io/ ( preduix assignment url)
+
+
+================================================================================
+
+
+git clone https://github.build.ge.com/Pxc/px-card.git/
+
+===============================                                        cd C:\Users\ac835981\Documents\PREDIX_SOFTWARES\predix-seed-develop
+
+
+(for UI)
+
+npm config set strict-ssl false
+
+npm install
+
+npm install -g bower
+
+npm install -g grunt-cli
+
+C:\Users\ac835981\AppData\Roaming\npm\bower install
+
+C:\Users\ac835981\AppData\Roaming\npm\grunt serve
+
+===================================================================
+
+(for DB)
+
+
+git clone https://github.com/john-k-ge/pg_studio_1.2_cf
+
+cd C:\Users\ac835981\pg_studio_1.2_cf
+
+cf login -a https://api.system.aws-usw02-pr.ice.predix.io
+
+pritee.padgaonkar1@ge.com
+
+Cap2016Gemin!
+
+update manifest.yml
+
+cf push
+
+cf a (get app names)
+
+cf s (get services)
+
+cf bs my-pg-studio_fms dtsfm_postgres_service (binding the service)
+
+cf restage my-pg-studio_fms
+
+cf env my-pg-studio_fms (setting environment for app-name)
+
+
+REFER https://www.predix.io/support/article/KB0010829
+
+==============================================================
+
+
+bower install --save PolymerElements/iron-elements  
+bower install --save PolymerElements/paper-elements  
+bower install --save PolymerElements/gold-elements  
+bower install --save PolymerElements/neon-elements  
+bower install --save PolymerElements/platinum-elements  
+bower install --save GoogleWebComponents/google-web-components  
+
+==================================================================
+
+
+postgres procedure example
+
+create or replace function setPassengerType(num varchar) returns varchar as
+    $$
+    declare
+        sql varchar;
+        str varchar;
+        re record;
+    begin
+    str='';
+        sql = 'select passenger_type from tops_order.passenger where flight_order_item_id=''' || num ||'''';
+        for re in execute sql loop
+           if str='' then
+               str = re.passenger_type;
+           else
+               str = str ||','|| re.passenger_type;
+           end if;
+        end loop;
+        sql = 'update tops_order.flight_order_item set passenger_type=''' || str ||''' where id=''' || num ||'''';
+        RAISE NOTICE 'i want to print %', sql;
+        execute sql;
+        return str;
+    end
+    $$
+language plpgsql;
+
+
+
+

@@ -1,0 +1,128 @@
+set  http_proxy=grc-americas-sanra-pitc-wkcz.proxy.corporate.gtm.ge.com:80
+set  https_proxy=grc-americas-sanra-pitc-wkcz.proxy.corporate.gtm.ge.com:80
+set  HTTP_PROXY=grc-americas-sanra-pitc-wkcz.proxy.corporate.gtm.ge.com:80
+set  HTTPS_PROXY=grc-americas-sanra-pitc-wkcz.proxy.corporate.gtm.ge.com:80
+set no_proxy=grc-americas-sanra-pitc-wkcz.proxy.corporate.gtm.ge.com:80
+
+set path=C:\Users\sitrai\Documents\Userdata\Predix\NodeJS\NodeJS;C:\Users\sitrai\Documents\Userdata\Predix\Git\bin;C:\Users\sitrai\Documents\Userdata\Predix\apache-maven-3.1.0\bin;C:\Users\sitrai\Documents\Userdata\Predix\cf-cli;C:\Program Files\Java\jdk1.8.0_92\bin;C:\Users\sitrai\AppData\Roaming\npm
+set java_home=C:\Program Files\Java\jdk1.8.0_92
+
+cf login -a https://api.system.aws-usw02-pr.ice.predix.io
+
+
+https://github.com/s989218/CG-PROJECT.git
+sitaramrai999@gmail.com   s989218/srai@989218
+
+dharmendra.debata@ge.com
+
+Test@123T
+
+cf a| cf s | cf p | cf push
+
+
+ashok.boligarla@capgemini.com
+1. OG-CTO-DTS-FleetMining-Local
+2. OG-CTO-DTS-FleetMining-Preview
+3. OG-CTO-DTS-FleetMining
+
+===========================================================================================================================
+<Host name="example.com"  appBase="webapps" unpackWARs="true" autoDeploy="true">
+	<Alias>www.example.com</Alias>
+	<Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs"prefix="example_access_log" suffix=".txt" pattern="%h %l %u %t "%r" %s %b" />
+	<Context path="" docBase="/opt/tomcat8/webapps/myapp" debug="0" reloadable="true"/>
+</Host>
+==============================================================================================================================
+etc. hosts
+127.0.0.1    DomainName
+=====================================
+sudo -l
+cp -i /home/sapm1/*.jar /opt/fms
+fuser
+fuser 8080/tcp
+kill -9 ProcessID
+sudo nohup sh catalina.sh run
+====================================
+bin/setenv.sh
+export CATALINA_OPTS="$CATALINA_OPTS -Xms1024m"
+export CATALINA_OPTS="$CATALINA_OPTS -Xmx8192m"
+export CATALINA_OPTS="$CATALINA_OPTS -XX:MaxPermSize=512m"
+
+conf/server.xml 
+    <Connector port="8080" protocol="HTTP/1.1"
+               connectionTimeout="20000"
+			   compression="on"
+			   compressableMimeType="text/html,text/xml,text/plain,text/json,text/javascript,text/css,application/json"
+               redirectPort="8443" />
+
+conf/tomcat-users.xml
+<tomcat-users>
+<role rolename="admin"/>
+<role rolename="admin-gui"/>
+<role rolename="manager-gui"/>
+<user username="admin" password="admin2016" roles="admin,admin-gui,manager-gui"/>
+</tomcat-users>
+QA:
+====================================================================================================
+---
+applications:
+  - name: fms-preview-ui
+    buildpack: predix_openresty_buildpack
+    path: dist
+    memory: 5G
+    stack: cflinuxfs2
+    services:
+            - dtsfm_redis_service #Redis Service on Cloud.
+            - dtsfm_view_service #View Service on Cloud. 
+    env:
+      UAA_SERVER_URL: https://a8a2ffc4-b04e-4ec1-bfed-7a51dd408725.predix-uaa.run.aws-usw02-pr.ice.predix.io
+      SERVICE_URL: https://fms-preview.run.aws-usw02-pr.ice.predix.io/
+      REDIS: redis-3
+      clientId: oilgas_GEOG_DTSFM_dev
+      uaa_authorization_header: b2lsZ2FzX0dFT0dfRFRTRk1fZGV2OjFUY05LVHluQzJESDNSeUY=
+	  
+DEV
+===================================================================================================
+---
+applications:
+  - name: fms-dev-ui
+    buildpack: predix_openresty_buildpack
+    path: dist
+    memory: 5G
+    stack: cflinuxfs2
+    services:
+            - dtsfm_redis_service #Redis Service on Cloud.
+            - dtsfm_view_service #View Service on Cloud. 
+    env:
+      UAA_SERVER_URL: https://3a2e204e-c175-4bcd-b71a-c45629d26f22.predix-uaa.run.aws-usw02-pr.ice.predix.io
+      SERVICE_URL: https://fms-dev.run.aws-usw02-pr.ice.predix.io/
+      REDIS: redis-1	
+      clientId: DTSFM_OAuth_Client
+      uaa_authorization_header: RFRTRk1fT0F1dGhfQ2xpZW50Om9iUWRzTmgyTDhieWJaVHg2UHh4V1ZDcUx6RGY4WXQrVmgwWTJBeEJ5NVU9=
+	  
+	  
+	  
+	  
+https://fms-dev-ui.run.aws-usw02-pr.ice.predix.io 
+https://fms-preview-ui.run.aws-usw02-pr.ice.predix.io  
+	  
+	  
+	  
+===============================================================================================================================
+PROD:
+
+---
+applications:
+  - name: fleetmining
+    buildpack: predix_openresty_buildpack
+    path: dist
+    memory: 1G
+    stack: cflinuxfs2
+    services:
+            - dtsfm_redis_service #Redis Service on Cloud.
+    env:
+      UAA_SERVER_URL: https://a8a2ffc4-b04e-4ec1-bfed-7a51dd408725.predix-uaa.run.aws-usw02-pr.ice.predix.io
+      SERVICE_URL: https://fms-prod.run.aws-usw02-pr.ice.predix.io/
+      REDIS: redis-3
+      clientId: oilgas_GEOG_DTSFM_dev
+      uaa_authorization_header: b2lsZ2FzX0dFT0dfRFRTRk1fZGV2OjFUY05LVHluQzJESDNSeUY=
+

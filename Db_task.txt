@@ -1,0 +1,111 @@
+1. sn : COALESCE
+2. over: group by
+3. last : max, first: min
+4. DateTimeNow()  : current_tmestamp, now()
+
+Upper(Mid([PROJECT_TYPE],1,6))!=""GLOBAL""  :: (strpos(UPPER(PROJECT_TYPE), 'GLOBAL') = 0
+Upper(Mid([PROJECT_TYPE],1,6))==""GLOBAL""  :: (strpos(UPPER(PROJECT_TYPE), 'GLOBAL') = 1
+
+SonarQube server [http://localhost:9000] can not be reached
+
+SonarQube server [http://localhost:9000] can not be reached
+
+https://openge.ge.com/svn/fleetminingsys/head
+
+
+https://stage.api.ge.com:8444/api26447live
+
+
+https://stage.api.ge.com/oil/fleetmining_QA/1.0/ 
+
+https://stage.api.ge.com:8444/oil/
+appName: TestConsumer
+appID: GEOil-FMS-ANDDR
+Shared Secret: fms@1233#98733yytt
+
+https://stage.api.ge.com/oil/FMSTEST
+
+Select parts_status, p_r_by_o, sum(p_sum_cm) from fms_ipm_parts_edit_fields fed join fms_ipm_master mt on fed.p_concatenate = mt.concatenate group by parts_status,p_r_by_o ;
+
+
+select * from fms_db_log order by fms_db_log_id desc;
+
+
+Select distinct parts_status from fms_ipm_parts_edit_fields fed join fms_ipm_master fim on fed.p_concatenate = fim.concatenate 
+  
+  select count(*) from fms_ipm_master;
+
+spring:
+  datasource:
+    url: jdbc:postgresql://3.209.204.112:5432/postgres
+    username: postgres
+    password: /=\\r!trA@123
+	
+	
+update fms_user_role set role_id=1 where user_id='502667253' 
+
+select * from fms_user_role where user_id='502667253';
+
+
+
+SELECT DISTINCT p_r_by_o, LENGTH(p_r_by_o) FROM fms_ipm_parts_edit_fields
+
+uPDATE fms_ipm_parts_edit_fields SET p_r_by_o = NULL WHERE LENGTH(p_r_by_o) = 0
+
+SELECT * FROM fms_ipm_parts_edit_fields  WHERE LENGTH(p_r_by_o) = 0
+
+
+select count(*), identifier, business_unit, region from fms_ipm_fw_history where week = '50' group by identifier, business_unit, region
+  
+  select count(*) from fms_ipm_pmo_history
+  
+  select count(region), region from fms_ipm_master where region = 'Sub-saharan Africa' and new_p_and_l = 'TMS' group by region
+  
+  
+  
+  
+  
+  
+  
+  
+Sharif- 8652269756
+  
+  
+  https://unifiedportal-mem.epfindia.gov.in/memberinterface/
+  
+         .state('HomeNewMetricsPage', {
+			url: '/NewMetrics',
+			templateUrl: 'views/NewMetrics.html',
+			controller: 'NewMetricsCtrl'		
+       }) 
+       
+       .state('HomeIpmPage', {
+			url: '/IPM',
+            templateUrl: 'views/IPM/IPM-Main.html',
+            controller:'IPMParentCtrl'		
+       }) 
+  
+  
+  
+  
+Modified: C:\Users\sb845579\Documents\Userdata\FMS\public\stylesheets\IPM-Main.css  
+Modified: C:\Users\sb845579\Documents\Userdata\FMS\public\views\IPM\IPM-Main.html  
+Modified: C:\Users\sb845579\Documents\Userdata\FMS\public\views\directive-html\iPM\keyDeals.html  
+Modified: C:\Users\sb845579\Documents\Userdata\FMS\tasks\options\connect.js   
+
+
+update fms_user_role set role_id=1 where user_id='502667253';
+
+dial in no:6627
+conference id : 762527899
+
+
+Chakravarty, Anindita <anindita.chakravarty@capgemini.com>; Debata, Dharmendra <dharmendra.debata@capgemini.com>; Khristi, Aakash <aakash.khristi@capgemini.com>; Chawda, Ajay <ajay.chawda@capgemini.com>; Akkal, Jasmine <jasmine.akkal@capgemini.com>; Phaldesai, Akshata <akshata.phaldesai@capgemini.com>; Aghor, Yutee <yutee.aghor@capgemini.com>; Dhamanskar, Ketan <ketan.dhamanskar@capgemini.com>; Wani, Pallavi <pallavi.wani@capgemini.com>; Narayan, Bharath <bharath.narayan@capgemini.com>; Deore, Shailendrasingh <shailendrasingh.deore@capgemini.com>; Diwate, Priyanka <priyanka.diwate@capgemini.com>; Shirsat, Ganesh <ganesh.shirsat@capgemini.com>; Joshi, Nitin <nitin.joshi@capgemini.com>; Padgaonkar, Pritee <pritee.padgaonkar@capgemini.com>; Dashore, Rohit <rohit.dashore@capgemini.com>; Bhatiya, Sanjay <sanjay.bhatiya@capgemini.com>; Jain, Adarsh <adarsh.a.jain@capgemini.com>; Kandari, Divyansh <divyansh.kandari@capgemini.com>; Rai, Sitaram <sitaram.rai@capgemini.com>; Srivastava, Avneesh <avneesh.srivastava@capgemini.com>; Khurana, Ishan <ishan.khurana@capgemini.com>
+
+
+Select sum_cm, week, caption, sequence as seq_caption from fms_ipm_pmo_history  where business_unit = 'DTS' and week <= '7' and type = 'PMO FINANCIAL VIEW' order by week, sequence
+
+
+Service Request- 118499704711
+
+if
